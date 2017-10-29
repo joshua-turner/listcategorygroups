@@ -1,0 +1,14 @@
+{
+	"name": "joshua-turner/listcategorygroups",
+	"description": "FieldType for dropdown of all Category Groups, rather than the individual Categories contained therein",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Joshua Turner",
+			"homepage": "joshuaturner.co"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

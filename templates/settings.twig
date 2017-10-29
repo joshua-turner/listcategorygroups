@@ -1,0 +1,30 @@
+{#
+/**
+ * List Category Groups plugin for Craft CMS
+ *
+ * ListCategoryGroupsFieldType Settings
+ *
+ * @author    Joshua Turner
+ * @copyright Copyright (c) 2017 Joshua Turner
+ * @link      joshuaturner.co
+ * @package   ListCategoryGroups
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% if categoryGroups %}
+  {{ forms.checkboxSelectField({
+    label: "Category Groups"|t,
+    instructions: "Which category groups do you want to select from?"|t,
+    id: 'categoryGroups',
+    name: 'categoryGroups',
+    options: categoryGroups,
+    values: settings.categoryGroups
+  })}}
+{% else %}
+  {{ forms.field({
+    label: "Category Groups"|t
+  }, '<p class="error">' ~ "No category groups exist yet."|t ~ '</p>') }}
+{% endif %}
